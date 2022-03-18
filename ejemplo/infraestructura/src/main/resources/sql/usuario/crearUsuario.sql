@@ -1,0 +1,1 @@
+INSERT INTO dbo.usuario VALUES (:nombre, :edad, :direccion);

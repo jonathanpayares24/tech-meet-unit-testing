@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'com.jonathan'
+version '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation project.ext.springbootweb
+    implementation project.ext.springtxt
+
+    implementation project.ext.lombok
+    annotationProcessor project.ext.lombok
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    implementation project(':dominio')
+}
+
+test {
+    useJUnitPlatform()
+}

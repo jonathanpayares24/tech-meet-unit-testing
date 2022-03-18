@@ -1,0 +1,176 @@
+2021-10-08 09:43:19,833 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [poolJonathan housekeeper] poolJonathan - Thread starvation or clock leap detected (housekeeper delta=15h35m36s762ms288�s100ns).
+2021-10-08 10:28:24,550 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application using Java 11.0.11 on CO-IT023071 with PID 30368 (C:\Users\jonathan.payares\Documents\Proyecto\Ejemplos\Hexagonal\ejemplo\build\classes\java\main started by jonathan.payares in C:\Users\jonathan.payares\Documents\Proyecto\Ejemplos\Hexagonal\ejemplo)
+2021-10-08 10:28:24,552 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-10-08 10:28:26,063 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8081 (http)
+2021-10-08 10:28:26,071 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8081"]
+2021-10-08 10:28:26,072 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-10-08 10:28:26,072 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-08 10:28:26,152 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-10-08 10:28:26,152 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1560 ms
+2021-10-08 10:28:26,308 INFO com.zaxxer.hikari.HikariDataSource [main] poolJonathan - Starting...
+2021-10-08 10:28:26,585 INFO com.zaxxer.hikari.HikariDataSource [main] poolJonathan - Start completed.
+2021-10-08 10:28:26,602 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 5.2.1 by Boxfuse
+2021-10-08 10:28:26,609 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:sqlserver://localhost:1433;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;trustStoreType=JKS;trustServerCertificate=false;TransparentNetworkIPResolution=true;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;encrypt=false;disableStatementPooling=true;databaseName=pruebajonathan;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite; (Microsoft SQL Server 15.0)
+2021-10-08 10:28:26,634 WARN org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway upgrade recommended: SQL Server 15.0 is newer than this version of Flyway and support has not been tested.
+2021-10-08 10:28:26,681 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 1 migration (execution time 00:00.026s)
+2021-10-08 10:28:26,703 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema [dbo]: 1.0
+2021-10-08 10:28:26,706 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema [dbo] is up to date. No migration necessary.
+2021-10-08 10:28:26,964 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-10-08 10:28:27,114 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8081"]
+2021-10-08 10:28:27,141 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8081 (http) with context path '/gestion-usuarios'
+2021-10-08 10:28:27,142 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2021-10-08 10:28:27,157 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2021-10-08 10:28:27,180 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2021-10-08 10:28:27,264 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 3.111 seconds (JVM running for 3.43)
+2021-10-08 10:28:30,723 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-08 10:28:30,725 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8081-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-10-08 10:28:30,726 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8081-exec-1] Completed initialization in 1 ms
+2021-10-08 10:28:48,738 ERROR com.jonathan.ejemplo.configuracion.ConfiguracionError [http-nio-8081-exec-7] RuntimeException
+java.lang.RuntimeException: La persona es menor de edad
+	at com.jonathan.ejemplo.modelo.Usuario.validarEdad(Usuario.java:36)
+	at com.jonathan.ejemplo.modelo.Usuario.<init>(Usuario.java:10)
+	at com.jonathan.ejemplo.fabrica.FabricaUsuario.crearUsuario(FabricaUsuario.java:11)
+	at com.jonathan.ejemplo.manejador.usuario.ManejadorCrearUsuario.ejecutar(ManejadorCrearUsuario.java:22)
+	at com.jonathan.ejemplo.manejador.usuario.ManejadorCrearUsuario$$FastClassBySpringCGLIB$$8b411693.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.jonathan.ejemplo.manejador.usuario.ManejadorCrearUsuario$$EnhancerBySpringCGLIB$$3b771691.ejecutar(<generated>)
+	at com.jonathan.ejemplo.controlador.ControladorUsuario.crearUsuario(ControladorUsuario.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2021-10-08 10:29:42,814 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application using Java 11.0.11 on CO-IT023071 with PID 40064 (C:\Users\jonathan.payares\Documents\Proyecto\Ejemplos\Hexagonal\ejemplo\build\classes\java\main started by jonathan.payares in C:\Users\jonathan.payares\Documents\Proyecto\Ejemplos\Hexagonal\ejemplo)
+2021-10-08 10:29:42,816 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-10-08 10:29:43,914 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8081 (http)
+2021-10-08 10:29:43,921 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8081"]
+2021-10-08 10:29:43,921 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-10-08 10:29:43,921 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-08 10:29:44,003 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-10-08 10:29:44,003 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1147 ms
+2021-10-08 10:29:44,114 INFO com.zaxxer.hikari.HikariDataSource [main] poolJonathan - Starting...
+2021-10-08 10:29:44,300 INFO com.zaxxer.hikari.HikariDataSource [main] poolJonathan - Start completed.
+2021-10-08 10:29:44,314 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 5.2.1 by Boxfuse
+2021-10-08 10:29:44,321 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:sqlserver://localhost:1433;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;trustStoreType=JKS;trustServerCertificate=false;TransparentNetworkIPResolution=true;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;encrypt=false;disableStatementPooling=true;databaseName=pruebajonathan;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite; (Microsoft SQL Server 15.0)
+2021-10-08 10:29:44,348 WARN org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway upgrade recommended: SQL Server 15.0 is newer than this version of Flyway and support has not been tested.
+2021-10-08 10:29:44,420 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 1 migration (execution time 00:00.031s)
+2021-10-08 10:29:44,445 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema [dbo]: 1.0
+2021-10-08 10:29:44,449 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema [dbo] is up to date. No migration necessary.
+2021-10-08 10:29:44,735 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-10-08 10:29:44,879 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8081"]
+2021-10-08 10:29:44,895 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8081 (http) with context path '/gestion-usuarios'
+2021-10-08 10:29:44,896 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2021-10-08 10:29:44,906 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2021-10-08 10:29:44,926 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2021-10-08 10:29:45,006 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 2.553 seconds (JVM running for 2.859)
+2021-10-08 10:29:46,968 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-08 10:29:46,971 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8081-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-10-08 10:29:46,971 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8081-exec-1] Completed initialization in 0 ms
+2021-10-08 10:31:03,642 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application using Java 11.0.11 on CO-IT023071 with PID 4860 (C:\Users\jonathan.payares\Documents\Proyecto\Ejemplos\Hexagonal\ejemplo\build\classes\java\main started by jonathan.payares in C:\Users\jonathan.payares\Documents\Proyecto\Ejemplos\Hexagonal\ejemplo)
+2021-10-08 10:31:03,644 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-10-08 10:31:04,836 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8081 (http)
+2021-10-08 10:31:04,853 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8081"]
+2021-10-08 10:31:04,854 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-10-08 10:31:04,854 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-08 10:31:04,938 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-10-08 10:31:04,938 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1250 ms
+2021-10-08 10:31:05,059 INFO com.zaxxer.hikari.HikariDataSource [main] poolJonathan - Starting...
+2021-10-08 10:31:05,252 INFO com.zaxxer.hikari.HikariDataSource [main] poolJonathan - Start completed.
+2021-10-08 10:31:05,267 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 5.2.1 by Boxfuse
+2021-10-08 10:31:05,273 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:sqlserver://localhost:1433;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;trustStoreType=JKS;trustServerCertificate=false;TransparentNetworkIPResolution=true;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;encrypt=false;disableStatementPooling=true;databaseName=pruebajonathan;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite; (Microsoft SQL Server 15.0)
+2021-10-08 10:31:05,307 WARN org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway upgrade recommended: SQL Server 15.0 is newer than this version of Flyway and support has not been tested.
+2021-10-08 10:31:05,358 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 1 migration (execution time 00:00.026s)
+2021-10-08 10:31:05,381 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema [dbo]: 1.0
+2021-10-08 10:31:05,383 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema [dbo] is up to date. No migration necessary.
+2021-10-08 10:31:05,666 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-10-08 10:31:05,809 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8081"]
+2021-10-08 10:31:05,827 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8081 (http) with context path '/gestion-usuarios'
+2021-10-08 10:31:05,828 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2021-10-08 10:31:05,839 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2021-10-08 10:31:05,860 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2021-10-08 10:31:05,937 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 2.701 seconds (JVM running for 3.026)
+2021-10-08 10:31:08,669 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-08 10:31:08,671 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8081-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-10-08 10:31:08,672 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8081-exec-1] Completed initialization in 1 ms
+2021-10-08 10:31:08,741 ERROR com.jonathan.ejemplo.configuracion.ConfiguracionError [http-nio-8081-exec-1] ExcepcionValorInvalido - La persona es menor de edad
+2021-10-08 10:33:34,900 INFO org.springframework.boot.StartupInfoLogger [main] Starting Application using Java 11.0.11 on CO-IT023071 with PID 19048 (C:\Users\jonathan.payares\Documents\Proyecto\Ejemplos\Hexagonal\ejemplo\build\classes\java\main started by jonathan.payares in C:\Users\jonathan.payares\Documents\Proyecto\Ejemplos\Hexagonal\ejemplo)
+2021-10-08 10:33:34,902 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-10-08 10:33:36,101 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8081 (http)
+2021-10-08 10:33:36,108 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8081"]
+2021-10-08 10:33:36,108 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-10-08 10:33:36,108 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-08 10:33:36,194 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-10-08 10:33:36,194 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1246 ms
+2021-10-08 10:33:36,310 INFO com.zaxxer.hikari.HikariDataSource [main] poolJonathan - Starting...
+2021-10-08 10:33:36,481 INFO com.zaxxer.hikari.HikariDataSource [main] poolJonathan - Start completed.
+2021-10-08 10:33:36,496 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 5.2.1 by Boxfuse
+2021-10-08 10:33:36,502 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:sqlserver://localhost:1433;maxResultBuffer=-1;sendTemporalDataTypesAsStringForBulkCopy=true;delayLoadingLobs=true;useFmtOnly=false;useBulkCopyForBatchInsert=false;cancelQueryTimeout=-1;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=0;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;trustStoreType=JKS;trustServerCertificate=false;TransparentNetworkIPResolution=true;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=30;lockTimeout=-1;lastUpdateCount=true;encrypt=false;disableStatementPooling=true;databaseName=pruebajonathan;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite; (Microsoft SQL Server 15.0)
+2021-10-08 10:33:36,529 WARN org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway upgrade recommended: SQL Server 15.0 is newer than this version of Flyway and support has not been tested.
+2021-10-08 10:33:36,573 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 1 migration (execution time 00:00.024s)
+2021-10-08 10:33:36,594 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema [dbo]: 1.0
+2021-10-08 10:33:36,597 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema [dbo] is up to date. No migration necessary.
+2021-10-08 10:33:36,855 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-10-08 10:33:36,998 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8081"]
+2021-10-08 10:33:37,018 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8081 (http) with context path '/gestion-usuarios'
+2021-10-08 10:33:37,019 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2021-10-08 10:33:37,032 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2021-10-08 10:33:37,056 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2021-10-08 10:33:37,154 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 2.639 seconds (JVM running for 2.982)
+2021-10-08 10:33:40,472 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8081-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-08 10:33:40,474 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8081-exec-1] Initializing Servlet 'dispatcherServlet'
+2021-10-08 10:33:40,474 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8081-exec-1] Completed initialization in 0 ms
+2021-10-08 10:33:40,550 ERROR com.jonathan.ejemplo.configuracion.ConfiguracionError [http-nio-8081-exec-1] ExcepcionValorInvalido - La persona es menor de edad
